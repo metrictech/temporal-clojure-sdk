@@ -1,0 +1,24 @@
+{:paths ["src" "resources" "target/classes"],
+ :deps
+ {org.clojure/clojure {:mvn/version "1.12.4"},
+  org.clojure/core.async {:mvn/version "1.7.701"},
+  io.temporal/temporal-shaded {:mvn/version "1.32.1"},
+  com.taoensso/encore {:mvn/version "3.139.0"},
+  com.taoensso/timbre {:mvn/version "6.6.1"},
+  com.taoensso/nippy {:mvn/version "3.4.2"},
+  funcool/promesa {:mvn/version "11.0.678"},
+  metosin/jsonista {:mvn/version "0.3.13"},
+  medley/medley {:mvn/version "1.4.0"},
+  slingshot/slingshot {:mvn/version "0.12.2"}},
+ :aliases
+ {:lein2deps
+  {:deps
+   {io.github.borkdude/lein2deps
+    {:git/sha "1bcf2fbbcbef611381e5e9ccdc77bec1e62ea5e5"}},
+   :ns-default lein2deps.build,
+   :lein2deps/compile-java
+   {:src-dirs ["src" "resources"],
+    :class-dir "target/classes",
+    :javac-opts ["-target" "11" "-source" "11"]}}},
+ :deps/prep-lib
+ {:ensure "target/classes", :alias :lein2deps, :fn compile-java}}
