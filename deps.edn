@@ -11,7 +11,12 @@
   medley/medley {:mvn/version "1.4.0"},
   slingshot/slingshot {:mvn/version "0.12.2"}},
  :aliases
- {:lein2deps
+ {:test
+  {:extra-paths ["test"]
+   :extra-deps {criterium/criterium {:mvn/version "0.4.6"}
+                io.temporal/temporal-opentracing {:mvn/version "1.32.1"}
+                mockery/mockery {:mvn/version "0.1.4"}}}
+  :lein2deps
   {:deps
    {io.github.borkdude/lein2deps
     {:git/sha "1bcf2fbbcbef611381e5e9ccdc77bec1e62ea5e5"}},
