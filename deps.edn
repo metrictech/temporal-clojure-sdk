@@ -2,7 +2,8 @@
  :deps
  {org.clojure/clojure {:mvn/version "1.12.4"},
   org.clojure/core.async {:mvn/version "1.7.701"},
-  io.temporal/temporal-shaded {:mvn/version "1.32.1"},
+  io.temporal/temporal-shaded {:mvn/version "1.36.0"},
+  com.jayway.jsonpath/json-path {:mvn/version "2.9.0"}
   com.taoensso/encore {:mvn/version "3.139.0"},
   com.taoensso/timbre {:mvn/version "6.6.1"},
   com.taoensso/nippy {:mvn/version "3.4.2"},
